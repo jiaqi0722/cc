@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.jiaqi0722</groupId>
-    <artifactId>cc</artifactId>
-    <version>1.1.1.RELEASE</version>
+    <artifactId>spring-boot-starter-cc</artifactId>
+    <version>9.9.9.RELEASE</version>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
