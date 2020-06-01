@@ -14,7 +14,8 @@ import java.util.Objects;
  * Here  be  dragons *
  * * * * * * * * * * *
  *
- * @author teangtang
+ * @author 特昂唐  2020/6/1  06:01
+ * describe: InsertParam
  */
 public class InsertParam extends BaseSqlParam {
     private Map<String, Object> values;

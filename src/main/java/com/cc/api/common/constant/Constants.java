@@ -8,14 +8,21 @@ import org.springframework.stereotype.Component;
  * Here  be  dragons *
  * * * * * * * * * * *
  *
- * @author teangtang
+ * @author 特昂唐  2020/6/1  06:01
+ * describe: Constants
  */
 @Component
 public class Constants {
 
     public static final String ID_COLUMN_NAME = "id";
 
+    public static final String STATE_COLUMN_NAME = "state";
+
+    public static final String PASSWORD_COLUMN_NAME = "password";
+
     public static final String USER_NAME_COLUMN_NAME = "user_name";
+
+    public static final String REAL_NAME_COLUMN_NAME = "real_name";
 
     public static final String SOFT_DEL_COLUMN_NAME = "soft_del";
 

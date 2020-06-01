@@ -24,7 +24,8 @@ import org.springframework.transaction.annotation.Transactional;
  * Here  be  dragons *
  * * * * * * * * * * *
  *
- * @author teangtang
+ * @author 特昂唐  2020/6/1  06:01
+ * describe: BaseService
  */
 @Service
 public class BaseService {
@@ -73,14 +74,14 @@ public class BaseService {
         return this.mapper.insert(p);
     }
 
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     public String insertAndReturnId(InsertParam p) {
         return this.insert(p) > 0 ? p.getValues().get("id").toString() : null;
     }
 
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     public int insert(HttpServletRequest request, InsertParam p) {
-        if (p.getValues().containsKey("id")) {
+        if (p.getValues().containsKey(Constants.ID_COLUMN_NAME)) {
             p.getValues().remove("id");
         }
 
@@ -105,17 +106,17 @@ public class BaseService {
         return this.mapper.insert(p);
     }
 
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     public String insertAndReturnId(HttpServletRequest request, InsertParam p) {
         return this.insert(request, p) > 0 ? p.getValues().get("id").toString() : null;
     }
 
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     public int insertBySql(String sql) {
         return this.mapper.insertBySql(sql);
     }
 
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     public int update(UpdateParam p) {
         if (TablesConfig.isDefaultTable(p.getTableName())) {
             Date now = new Date();
@@ -125,7 +126,7 @@ public class BaseService {
         return this.mapper.update(p);
     }
 
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     public int update(HttpServletRequest request, UpdateParam p) {
         if (TablesConfig.isDefaultTable(p.getTableName())) {
             Date now = new Date();
@@ -143,12 +144,12 @@ public class BaseService {
         return this.mapper.update(p);
     }
 
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     public int updateBySql(String sql) {
         return this.mapper.updateBySql(sql);
     }
 
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     public int logicDelete(UpdateParam p) {
         Date now = new Date();
         p.addValue("update_date", now);
@@ -157,7 +158,7 @@ public class BaseService {
         return this.mapper.update(p);
     }
 
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     public int logicDelete(HttpServletRequest request, UpdateParam p) {
         Date now = new Date();
         String userId = null;
@@ -174,12 +175,12 @@ public class BaseService {
         return this.mapper.update(p);
     }
 
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     public int delete(DeleteParam p) {
         return this.mapper.delete(p);
     }
 
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     public int deleteBySql(String sql) {
         return this.mapper.deleteBySql(sql);
     }

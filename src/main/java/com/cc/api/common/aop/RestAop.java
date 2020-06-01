@@ -29,12 +29,13 @@ import org.springframework.web.multipart.MultipartFile;
  * Here  be  dragons *
  * * * * * * * * * * *
  *
- * @author teangtang
+ * @author 特昂唐  2020/6/1  06:01
+ * describe: RestAop
  */
 @Component
 @Aspect
 public class RestAop {
-    private static Log log = LogFactory.getLog(RestAop.class);
+    private static final Log log = LogFactory.getLog(RestAop.class);
     private static final String DATE_FORMAT = "yyyy-MM-dd HH:mm:ss";
     @Value("${token.secret}")
     private String tokenSecret;

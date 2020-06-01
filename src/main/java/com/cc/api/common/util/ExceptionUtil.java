@@ -9,9 +9,9 @@ import java.io.PrintStream;
  * Here  be  dragons *
  * * * * * * * * * * *
  *
- * @author teangtang
+ * @author 特昂唐  2020/6/1  06:01
+ * describe: ExceptionUtil
  */
-
 public class ExceptionUtil {
     public static String getException(Throwable e) {
         if (e == null) {

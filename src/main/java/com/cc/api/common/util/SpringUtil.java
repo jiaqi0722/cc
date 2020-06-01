@@ -10,7 +10,8 @@ import org.springframework.stereotype.Component;
  * Here  be  dragons *
  * * * * * * * * * * *
  *
- * @author teangtang
+ * @author 特昂唐  2020/6/1  06:01
+ * describe: SpringUtil
  */
 @Component
 public class SpringUtil implements ApplicationContextAware {

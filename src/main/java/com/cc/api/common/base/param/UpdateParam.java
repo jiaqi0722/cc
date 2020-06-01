@@ -10,7 +10,9 @@ import java.util.*;
  * * * * * * * * * * *
  * Here  be  dragons *
  * * * * * * * * * * *
- * @author teangtang
+ *
+ * @author 特昂唐  2020/6/1  06:01
+ * describe: UpdateParam
  */
 public class UpdateParam extends BaseSqlParam {
     private Map<String, Object> values;

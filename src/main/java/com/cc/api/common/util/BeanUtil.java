@@ -9,8 +9,8 @@ import java.lang.reflect.Field;
  * Here  be  dragons *
  * * * * * * * * * * *
  *
- * @author 特昂唐  2020/5/19  13:41
- * describe:
+ * @author 特昂唐  2020/6/1  06:01
+ * describe: BeanUtil
  */
 public class BeanUtil {
     public BeanUtil() {

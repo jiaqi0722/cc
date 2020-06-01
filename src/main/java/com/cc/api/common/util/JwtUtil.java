@@ -15,7 +15,8 @@ import java.util.*;
  * Here  be  dragons *
  * * * * * * * * * * *
  *
- * @author teangtang
+ * @author 特昂唐  2020/6/1  06:01
+ * describe: JwtUtil
  */
 public class JwtUtil {
     public JwtUtil() {
@@ -44,9 +45,6 @@ public class JwtUtil {
                     break;
                 case HOUR:
                     calendarTimeUnit = 10;
-                    break;
-                case MINUTE:
-                    calendarTimeUnit = 12;
                     break;
                 case SECOND:
                     calendarTimeUnit = 13;

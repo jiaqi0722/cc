@@ -8,7 +8,8 @@ import java.net.URLEncoder;
  * Here  be  dragons *
  * * * * * * * * * * *
  *
- * @author teangtang
+ * @author 特昂唐  2020/6/1  06:01
+ * describe: EncodeUtil
  */
 public class EncodeUtil {
     private static final String DEFAULT_URL_ENCODING = "UTF-8";

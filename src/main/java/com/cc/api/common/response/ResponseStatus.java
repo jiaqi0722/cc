@@ -2,10 +2,11 @@ package com.cc.api.common.response;
 
 /**
  * * * * * * * * * * *
- * Here be dragons   *
+ * Here  be  dragons *
  * * * * * * * * * * *
  *
- * @author teangtang
+ * @author 特昂唐  2020/6/1  06:01
+ * describe: ResponseStatus
  */
 public enum ResponseStatus {
     /**

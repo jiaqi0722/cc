@@ -9,12 +9,13 @@ import org.springframework.stereotype.Component;
  * Here  be  dragons *
  * * * * * * * * * * *
  *
- * @author teangtang
+ * @author 特昂唐  2020/6/1  06:01
+ * describe: SqlProviderFactory
  */
 @Component("sqlProviderFactory")
 public class SqlProviderFactory {
-    private static final String MYSQL_DB_DRIVER_NAME = "com.mysql.jdbc.Driver";
-    private static final String DM_DB_DRIVER_NAME = "dm.jdbc.driver.DmDriver";
+    private static final String MYSQL_DB_DRIVER_NAME = "com.mysql.cj.jdbc.Driver";
+
     @Value("${spring.datasource.driver-class-name}")
     private String driverClassName;
 
@@ -22,28 +23,7 @@ public class SqlProviderFactory {
     }
 
     public SqlProvider getSqlProvider() {
-        String var1 = this.driverClassName;
-        byte var2 = -1;
-        switch(var1.hashCode()) {
-            case -1865851767:
-                if (var1.equals("dm.jdbc.driver.DmDriver")) {
-                    var2 = 1;
-                }
-                break;
-            case 931983394:
-                if (var1.equals("com.mysql.jdbc.Driver")) {
-                    var2 = 0;
-                }
-        }
-
-        switch(var2) {
-            case 0:
-                return new MysqlProvider();
-            case 1:
-                return new DMProvider();
-            default:
-                return new MysqlProvider();
-        }
+        return new MysqlProvider();
     }
 }
 

@@ -1,0 +1,40 @@
+package com.cc.api.common.config;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+import org.springframework.web.filter.CorsFilter;
+
+/**
+ * * * * * * * * * * *
+ * Here  be  dragons *
+ * * * * * * * * * * *
+ *
+ * @author 特昂唐  2020/6/1  06:01
+ * describe: CorsConfig
+ */
+@Configuration
+public class CorsConfig {
+    @Value("${cors.allowedOrigin}")
+    private String allowedOrigin;
+
+    public CorsConfig() {
+    }
+
+    private CorsConfiguration buildConfig() {
+        CorsConfiguration corsConfiguration = new CorsConfiguration();
+        corsConfiguration.addAllowedOrigin(this.allowedOrigin);
+        corsConfiguration.addAllowedHeader("*");
+        corsConfiguration.addAllowedMethod("*");
+        return corsConfiguration;
+    }
+
+    @Bean
+    public CorsFilter corsFilter() {
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        source.registerCorsConfiguration("/**", this.buildConfig());
+        return new CorsFilter(source);
+    }
+}

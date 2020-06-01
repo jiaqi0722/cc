@@ -5,7 +5,8 @@ package com.cc.api.common.response;
  * Here  be  dragons *
  * * * * * * * * * * *
  *
- * @author teangtang
+ * @author 特昂唐  2020/6/1  06:01
+ * describe: ResponsePageBean
  */
 public class ResponsePageBean<T> extends ResponseBean<T> {
     private Integer totalCount;

@@ -14,7 +14,8 @@ import java.util.regex.Pattern;
  * Here  be  dragons *
  * * * * * * * * * * *
  *
- * @author teangtang
+ * @author 特昂唐  2020/6/1  06:01
+ * describe: StringUtil
  */
 public class StringUtil {
     public StringUtil() {

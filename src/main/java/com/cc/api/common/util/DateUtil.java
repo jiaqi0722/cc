@@ -11,7 +11,8 @@ import java.util.Date;
  * Here  be  dragons *
  * * * * * * * * * * *
  *
- * @author teangtang
+ * @author 特昂唐  2020/6/1  06:01
+ * describe: DateUtil
  */
 public class DateUtil {
     public static final String DEFAULT_FORMAT = "YYYY-MM-dd HH:mm:ss";

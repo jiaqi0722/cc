@@ -6,7 +6,7 @@
 
     <groupId>com.github.jiaqi0722</groupId>
     <artifactId>spring-boot-starter-cc</artifactId>
-    <version>9.9.9</version>
+    <version>6.6.6.RELEASE</version>
 
     <parent>
         <groupId>org.springframework.boot</groupId>

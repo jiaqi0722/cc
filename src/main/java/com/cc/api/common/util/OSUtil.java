@@ -9,7 +9,8 @@ import java.io.InputStreamReader;
  * Here  be  dragons *
  * * * * * * * * * * *
  *
- * @author teangtang
+ * @author 特昂唐  2020/6/1  06:01
+ * describe: OSUtil
  */
 public class OSUtil {
     public OSUtil() {

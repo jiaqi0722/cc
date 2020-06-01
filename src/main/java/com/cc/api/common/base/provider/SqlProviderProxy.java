@@ -12,7 +12,8 @@ import com.cc.api.common.base.param.UpdateParam;
  * Here  be  dragons *
  * * * * * * * * * * *
  *
- * @author teangtang
+ * @author 特昂唐  2020/6/1  06:01
+ * describe: SqlProviderProxy
  */
 public class SqlProviderProxy {
     private SqlProviderFactory sqlProviderFactory = (SqlProviderFactory) SpringUtil.getBean("sqlProviderFactory");

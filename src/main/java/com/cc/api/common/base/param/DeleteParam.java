@@ -14,7 +14,8 @@ import java.util.Objects;
  * Here  be  dragons *
  * * * * * * * * * * *
  *
- * @author teangtang
+ * @author 特昂唐  2020/6/1  06:01
+ * describe: DeleteParam
  */
 public class DeleteParam extends BaseSqlParam {
     private List<String> conditions;

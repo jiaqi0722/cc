@@ -7,9 +7,11 @@ import java.util.regex.Pattern;
  * Here  be  dragons *
  * * * * * * * * * * *
  *
- * @author teangtang
+ * @author 特昂唐  2020/6/1  06:01
+ * describe: SqlUtil
  */
 public class SqlUtil {
+
     private static final String CHECK_SQL_INJECTION_REG_STR = "(?:--)|(/\\*(?:.|[\\n\\r])*?\\*/)|(\\b(select|update|and|or|union|join|delete|insert|trancate|char|into|substr|ascii|declare|exec|master|into|drop|execute)\\b)";
     private static Pattern CHECK_SQL_INJECTION_REG = Pattern.compile("(?:--)|(/\\*(?:.|[\\n\\r])*?\\*/)|(\\b(select|update|and|or|union|join|delete|insert|trancate|char|into|substr|ascii|declare|exec|master|into|drop|execute)\\b)", 2);
 
