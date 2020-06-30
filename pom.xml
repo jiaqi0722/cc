@@ -6,7 +6,7 @@
 
     <groupId>com.github.jiaqi0722</groupId>
     <artifactId>spring-boot-starter-cc</artifactId>
-    <version>6.6.6.RELEASE</version>
+    <version>4.5.10</version>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -95,6 +95,12 @@
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>1.2.56</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.1.18</version>
         </dependency>
 
         <dependency>

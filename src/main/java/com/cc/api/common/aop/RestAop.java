@@ -43,7 +43,7 @@ public class RestAop {
     public RestAop() {
     }
 
-    @Around("execution(public * com.cc.api.controller..*.*(..))")
+    @Around("execution(public * com.cc.api.controller..*.*(..)) || execution(public * com.cc.api.common.base.controller..*.*(..))")
     public Object AroundRest(ProceedingJoinPoint joinPoint) {
         String target = null;
         Object result = null;

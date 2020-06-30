@@ -44,33 +44,34 @@ public class CRUDController {
 
     @Login
     @PostMapping
-    @ResponseBody
-    public ResponseBean<String> post(HttpServletRequest request, @RequestBody(required = false) Map<String, Object> item) throws IOException {
-        String tableName = (String)this.tablesConfig.getMap().get(request.getParameter("t"));
+    public ResponseBean<Object> post(HttpServletRequest request, @RequestBody(required = false) Map<String, Object> item) throws IOException {
+        String tableName = (String)this.tablesConfig.getMap().get(item.get("t").toString());
+        item.remove("t");
         InsertParam p = new InsertParam();
         p.setTableName(tableName);
         Map<String, Object> values = new HashMap();
         item.forEach((k, v) -> {
-            if (!Constants.ID_COLUMN_NAME.equals(k.toLowerCase())) {
+            if (!"id".equals(k.toLowerCase())) {
                 values.put(k, v);
             }
 
         });
         p.setValues(values);
-        String result = this.service.insertAndReturnId(request, p);
+        Object result = this.service.insertAndReturnId(request, p);
 
         return new ResponseBean<>(ResponseStatus.SUCCESS, result);
     }
 
     @Login
     @PutMapping
-    public ResponseBean<String> put(HttpServletRequest request, @RequestBody(required = false) Map<String, Object> item) throws IOException {
-        String tableName = (String)this.tablesConfig.getMap().get(request.getParameter("t"));
-        String result = null;
+    public ResponseBean<Object> put(HttpServletRequest request, @RequestBody(required = false) Map<String, Object> item) throws IOException {
+        String tableName = (String)this.tablesConfig.getMap().get(item.get("t").toString());
+        item.remove("t");
+        Object result = null;
         UpdateParam p = new UpdateParam();
         p.setTableName(tableName);
         item.forEach((k, v) -> {
-            if (Constants.ID_COLUMN_NAME.equals(k.toLowerCase())) {
+            if ("id".equals(k.toLowerCase())) {
                 p.addUniqueCondition(v.toString());
             } else {
                 p.addValue(k, v);
@@ -86,8 +87,7 @@ public class CRUDController {
 
     @Login
     @DeleteMapping
-    @ResponseBody
-    public ResponseBean<Integer> delete(HttpServletRequest request, @RequestBody(required = false) Map<String, Object> item) throws IOException {
+    public ResponseBean<Integer> delete(HttpServletRequest request) throws IOException {
         String tableName = (String)this.tablesConfig.getMap().get(request.getParameter("t"));
         String encodeId = request.getParameter(Constants.ID_COLUMN_NAME);
         String id = new String((new BASE64Decoder()).decodeBuffer(encodeId));
