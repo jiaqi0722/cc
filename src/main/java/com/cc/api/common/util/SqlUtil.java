@@ -13,7 +13,7 @@ import java.util.regex.Pattern;
 public class SqlUtil {
 
     private static final String CHECK_SQL_INJECTION_REG_STR = "(?:--)|(/\\*(?:.|[\\n\\r])*?\\*/)|(\\b(select|update|and|or|union|join|delete|insert|trancate|char|into|substr|ascii|declare|exec|master|into|drop|execute)\\b)";
-    private static Pattern CHECK_SQL_INJECTION_REG = Pattern.compile("(?:--)|(/\\*(?:.|[\\n\\r])*?\\*/)|(\\b(select|update|and|or|union|join|delete|insert|trancate|char|into|substr|ascii|declare|exec|master|into|drop|execute)\\b)", 2);
+    private static final Pattern CHECK_SQL_INJECTION_REG = Pattern.compile("(?:--)|(/\\*(?:.|[\\n\\r])*?\\*/)|(\\b(select|update|and|or|union|join|delete|insert|trancate|char|into|substr|ascii|declare|exec|master|into|drop|execute)\\b)", 2);
 
     public SqlUtil() {
     }

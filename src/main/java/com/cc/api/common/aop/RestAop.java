@@ -83,6 +83,7 @@ public class RestAop {
 
             Object var15;
             if (Objects.nonNull(method.getAnnotation(Login.class))) {
+                assert request != null;
                 String token = request.getHeader("auth");
                 log.info("开始校验token:" + token);
 

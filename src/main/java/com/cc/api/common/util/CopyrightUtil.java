@@ -2,15 +2,11 @@ package com.cc.api.common.util;
 
 import com.cc.api.common.response.ResponseBean;
 import com.cc.api.common.response.ResponseStatus;
-import io.jsonwebtoken.Claims;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
-import sun.misc.BASE64Decoder;
 
-import java.io.File;
-import java.io.IOException;
 
 /**
  * * * * * * * * * * *
