@@ -64,7 +64,7 @@ public class CRUDController {
 
     @Login
     @PutMapping
-    public ResponseBean<Object> put(HttpServletRequest request, @RequestBody(required = false) Map<String, Object> item) throws IOException {
+    public ResponseBean<Object> put(HttpServletRequest request, @RequestBody(required = false) Map<String, Object> item) {
         String tableName = (String)this.tablesConfig.getMap().get(item.get("t").toString());
         item.remove("t");
         Object result = null;
