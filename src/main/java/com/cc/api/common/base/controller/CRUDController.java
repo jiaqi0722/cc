@@ -45,8 +45,7 @@ public class CRUDController {
     @Login
     @PostMapping
     public ResponseBean<Object> post(HttpServletRequest request, @RequestBody(required = false) Map<String, Object> item) throws IOException {
-        String tableName = (String)this.tablesConfig.getMap().get(item.get("t").toString());
-        item.remove("t");
+        String tableName = (String)this.tablesConfig.getMap().get(request.getParameter("t"));
         InsertParam p = new InsertParam();
         p.setTableName(tableName);
         Map<String, Object> values = new HashMap();
@@ -65,8 +64,7 @@ public class CRUDController {
     @Login
     @PutMapping
     public ResponseBean<Object> put(HttpServletRequest request, @RequestBody(required = false) Map<String, Object> item) {
-        String tableName = (String)this.tablesConfig.getMap().get(item.get("t").toString());
-        item.remove("t");
+        String tableName = (String)this.tablesConfig.getMap().get(request.getParameter("t"));
         Object result = null;
         UpdateParam p = new UpdateParam();
         p.setTableName(tableName);

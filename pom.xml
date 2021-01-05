@@ -6,7 +6,7 @@
 
     <groupId>com.github.jiaqi0722</groupId>
     <artifactId>spring-boot-starter-cc</artifactId>
-    <version>4.5.10</version>
+    <version>5.6.11</version>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -36,8 +36,8 @@
     </developers>
 
     <scm>
-        <url>https://github.com/jiaqi0722/my-test</url>
-        <connection>https://github.com/jiaqi0722/my-test.git</connection>
+        <url>https://github.com/jiaqi0722/cc</url>
+        <connection>https://github.com/jiaqi0722/cc.git</connection>
         <developerConnection>https://github.com/jiaqi0722</developerConnection>
     </scm>
 
