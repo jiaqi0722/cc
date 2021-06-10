@@ -100,6 +100,13 @@ public class BaseService {
             } catch (Exception var6) {
                 var6.printStackTrace();
             }
+            assert claims != null;
+            p.addValue("create_by", claims.get("user_id"));
+            p.addValue("create_user_name", claims.get("user_name"));
+            p.addValue("create_real_name", claims.get("real_name"));
+            p.addValue("create_date", now);
+            p.addValue("update_by", claims.get("user_id"));
+            p.addValue("update_date", now);
 
         }
 
@@ -139,6 +146,7 @@ public class BaseService {
             }
 
             p.addValue("update_date", now);
+            p.addValue("update_by", userId.toString());
         }
 
         return this.mapper.update(p);
