@@ -14,7 +14,6 @@ import org.springframework.stereotype.Component;
  */
 @Component("sqlProviderFactory")
 public class SqlProviderFactory {
-    private static final String MYSQL_DB_DRIVER_NAME = "com.mysql.cj.jdbc.Driver";
 
     @Value("${spring.datasource.driver-class-name}")
     private String driverClassName;
